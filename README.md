@@ -1,8 +1,7 @@
 # Vacation Cost Calculator
 
 A command-line tool that reads a CSV of planned trips, calculates each trip's
-length and total cost, and writes the results to a new CSV, sorted from least
-to most expensive. Invalid rows are skipped with a message naming the row,
+length and total cost, and writes the results to a new CSV. Invalid rows are skipped with a message naming the row,
 column, and value.
 
 ## Requirements
