@@ -8,7 +8,7 @@ COLUMNS = ['destination', 'start_date', 'end_date',
 
 def read_file(input_file):
     trips = []
-    skips = []
+    skipped_row_errors = []
     missing_cols = []
     
     with open(input_file) as file:
@@ -36,11 +36,11 @@ def read_file(input_file):
                             get_float(row, "other_cost_per_day"))
                 trips.append(trip)
             except ValueError as err:
-                skips.append(f"Skipped row {reader.line_num}: {err}")
+                skipped_row_errors.append(f"Skipped row {reader.line_num}: {err}")
 
-        if not trips and not skips:
+        if not trips and not skipped_row_errors:
             raise ValueError(input_file + "has no row data")
-        return trips, skips
+        return trips, skipped_row_errors
 
 def get_string(row, column):
     value = (row[column] or "").strip()

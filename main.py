@@ -9,9 +9,9 @@ def main():
             try:
                 input_file = sys.argv[1]
                 output_file = sys.argv[2]
-                trips, skips = read_file(input_file)
+                trips, skipped_row_errors = read_file(input_file)
     
-                for skip in skips:
+                for skip in skipped_row_errors:
                     print(skip)
         
                 write_file(trips, output_file)
