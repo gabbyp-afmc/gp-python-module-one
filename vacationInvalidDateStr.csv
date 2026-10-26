@@ -1,0 +1,7 @@
+destination,start_date,end_date,flights_cost,hotel_cost_per_day,other_cost_per_day
+London,2027-04-12,2027-04-19,600,300,150
+Miami,DATE,2027-05-15,300,250,100
+Paris,2027-06-07,2027-06-14,625,300,110
+New York,2027-12-12,2027-12-18,200,300,150
+Rome,2027-09-06,2027-09-13,750,225,100
+San Diego,2027-10-04,DATE,400,200,90
